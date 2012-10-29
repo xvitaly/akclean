@@ -10,7 +10,7 @@ Version: 0.1
 */
 function akc_exec()
 {
-?>
+  ?>
   <h2>Модуль очистки таблиц Akismet</h2>
   <div>Akismet Cleaner предназначен для лёгкой и быстрой очистки таблицы <strong>wp_commentmeta</strong> от множества записей Akismet, которые накапливаются в ней за время использования этого плагина.</div><br />
   <div>Akismet Cleaner удалит следующее:</div>
@@ -21,7 +21,7 @@ function akc_exec()
     </ol>
   </div><br />
   <div>Для начала процесса очистки нажмите соответствующую кнопку.</div>
-<?php
+  <?php
   if (is_admin())
   {
     global $wpdb;
@@ -35,22 +35,22 @@ function akc_exec()
     }
     else
     {
-    ?>
-    <br /><br />
-    <div style="text-align:center">
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>?page=<?php echo plugin_basename(__FILE__); ?>" method="post">
-        <input type="hidden" name="akc" value="1" />
-        <input type="submit" value="Очистить таблицы Akismet!" />
-      </form>
-    </div>
-<?php
+      ?>
+      <br /><br />
+      <div style="text-align:center">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>?page=<?php echo plugin_basename(__FILE__); ?>" method="post">
+          <input type="hidden" name="akc" value="1" />
+          <input type="submit" value="Очистить таблицы Akismet!" />
+        </form>
+      </div>
+      <?php
     }
   }
   else
   {
-?>
+    ?>
     <h3>Недостаточно прав для работы данного плагина! Обратитесь к администратору блога.</h3>
-<?php
+    <?php
   }
 }
 

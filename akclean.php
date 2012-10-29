@@ -29,7 +29,9 @@ function akc_exec()
     {
       $wpdb->query("DELETE FROM wp_commentmeta WHERE comment_id NOT IN(SELECT comment_id FROM wp_comments);");
       $wpdb->query("DELETE FROM wp_commentmeta WHERE meta_key LIKE '%akismet%';");
-      echo "<h3>Таблицы Akismet были успешно очищены!</h3>";
+      ?>
+	  <h3>Таблицы Akismet были успешно очищены!</h3>
+	  <?php
     }
     else
     {
